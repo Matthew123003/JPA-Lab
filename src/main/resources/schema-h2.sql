@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS people;
+
+CREATE TABLE people (
+  id INT NOT NULL AUTO_INCREMENT,
+  first_name VARCHAR2(255) NOT NULL DEFAULT '',
+  last_name VARCHAR2(255) NOT NULL DEFAULT '',
+  mobile VARCHAR2(20),
+  birthday DATE DEFAULT NULL,
+  home_id SMALLINT DEFAULT NULL,
+  PRIMARY KEY (id));
+
+  ALTER TABLE people
+  ADD FOREIGN KEY (home_id)
+  REFERENCES homes(id);
+
+
+DROP TABLE IF EXISTS homes;
+
+CREATE TABLE homes (
+  id INT NOT NULL AUTO_INCREMENT,
+  address VARCHAR2(255) NOT NULL DEFAULT '',
+  homenumber VARCHAR2(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
+);
+
+DROP SEQUENCE hibernate_sequence;
+
+CREATE SEQUENCE hibernate_sequence;
