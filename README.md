@@ -1,5 +1,5 @@
-# TCUK - JPA
-This lab has the same goals of the JDBC lab, but using JPA.
+# JPA Lab
+This lab has the same goals of the JDBC AddressingPeople lab, but using JPA.
 
 The setup for the database stuff is the same as in the JDBC lab, so see the README from that lab for getting connected 
 to the database in case you forgot.  The `data-h2.sql` file is here again, too.  
