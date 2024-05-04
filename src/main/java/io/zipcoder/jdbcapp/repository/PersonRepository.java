@@ -14,6 +14,16 @@ import java.util.Map;
  * NOTE: Most of those methods are commented because this is supposed to compile for just the CreatePerson method.
  * You need to uncomment them.
  */
+@Repository
 public interface PersonRepository extends JpaRepository<Person, Integer> {
 
+    List<Person> findByMobileNumber(String mobileNumber);
+
+    List<Person> findByLastName(String lastName);
+
+    void deleteAllByIdIn(List<Integer> personIds);
+
+    List<Person> findByFirstName(String firstName);
+
+    List<Person> findByBirthday(Date birthday);
 }
